@@ -9,6 +9,11 @@ layout: base.njk
   <div class="love">
     <p>It's a very special page just for you.</p>
     <p>Thank you for using our application!</p>
-</div>
+  </div>
+  <ul>
+    {% for article in news.articles %}
+      <li> <h2> <a href={{ article.url }}>{{ article.title }}</a></h2> </li>
+    {% endfor %}
+  </ul>
 </div>
 <script src="js/index.js"></script>
